@@ -9,54 +9,53 @@
   --card-foreground: #0f172a;
   --border: #e2e8f0;
   --muted: #64748b;
-  --accent-glow: rgba(59, 130, 246, 0.12);
 }
 
 .dark {
-  --background: #080b11;
+  --background: #06080d;
   --foreground: #f8fafc;
-  --card: #0f172a;
+  --card: #0d111a;
   --card-foreground: #f1f5f9;
-  --border: #1e293b;
-  --muted: #94a3b8;
-  --accent-glow: rgba(59, 130, 246, 0.22);
+  --border: #1a2233;
+  --muted: #8899ac;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Custom grid patterns */
-.tech-grid {
-  background-size: 36px 36px;
-  background-image: 
-    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+/* Subtle architectural dot grid */
+.tech-dots {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-.dark .tech-grid {
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+.dark .tech-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
 }
 
 /* Glassmorphism */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(226, 232, 240, 0.85);
 }
 
 .dark .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(51, 65, 85, 0.55);
+  background: rgba(13, 17, 26, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(34, 46, 68, 0.6);
+}
+
+/* Editorial column transitions */
+.portal-column {
+  transition: flex 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease, border-color 0.3s ease, background 0.4s ease;
 }
 
 /* Accessible focus ring */
